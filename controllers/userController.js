@@ -31,7 +31,7 @@ module.exports = {
     },
 
     updateUser(req, res) {
-        user.findOneAndUpdate(
+        User.findOneAndUpdate(
             { _id: req.params.userId },
             { $set: req.body },
             { runValidators: true, new: true }
